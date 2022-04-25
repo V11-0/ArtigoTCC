@@ -2,7 +2,7 @@
 
 \usepackage{sbc-template}
 
-\usepackage[brazil]{babel}   
+\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
 \usepackage[alf]{abntex2cite}
@@ -23,7 +23,7 @@ para Auxílio na Aprendizagem de Qualidade de Software}}
 \address{Instituto Federal de Educação, Ciência e Tecnologia do Estado de São Paulo\\Campus Hortolândia (IFSP-HTO)
 \email{vinicius.bruscagini@aluno.ifsp.edu.br, carlos.rsantos@ifsp.edu.br}}
 
-\begin{document} 
+\begin{document}
 
 \maketitle
 
@@ -34,7 +34,7 @@ para Auxílio na Aprendizagem de Qualidade de Software}}
   and developers to understant these concepts in a practical way.
 \end{abstract}
 
-\begin{resumo} 
+\begin{resumo}
   Este trabalho possui o objetivo de criar um sistema de informação utilizando tecnologias e ferramentas
   famosas no mercado, aplicando conceitos de qualidade de software e gerenciamento de projetos.
   Será disponibilizado um material que documentará todos os aspectos desse sistema, de forma a ajudar
@@ -43,7 +43,7 @@ para Auxílio na Aprendizagem de Qualidade de Software}}
 
 \section{Introdução}
 
-A área de desenvolvimento de software e TI em geral é uma área que evoluiu muito nas ultimas
+A área de TI, incluindo desenvolvimento de software, é uma área que evoluiu muito nas ultimas
 décadas~\cite{Pacheco10} e continua evoluindo rapidamente até hoje. Novas Tecnologias e ferramentas
 surgem em rítmo acelerado e muitas delas ganham popularidade, demandando assim, novas
 habilidades para os profissionais de TI\@. Com essa evolução, os cursos oferecidos nessa área não conseguem
@@ -53,13 +53,14 @@ aprimorar seus conhecimentos.~\cite{macedo09}. Além disso, de acordo com uma pe
 ~\cite{wei08} os alunos de cursos de Engenharia de Software se preocupam em possuir um aprendizado
 voltado para prática e sempre ter convivência com conceitos e métodos importantes para o mercado de trabalho.
 
-Baseando-se nessas questões, a produção desse trabalho tem como objetivo desenvolver
-um sistema que possua as características de um software que é desenvolvido por empresas, ou seja, de
-sistemas que foram criados por equipes de profissionais e que são usados por muitas pessoas. Será provida
-uma documentação que abrange todos os aspectos desse sistema e que explique com clareza como o software
-funciona, quais tecnologias foram usadas e como se deu o seu desenvolvimento. Essa documentação e o
-código-fonte da aplicação poderiam então ser consultadas por qualquer pessoa, assim ajudando elas a
-entenderem alguns conceitos de Desenvolvimento de Software e como se dá suas aplicações na prática.
+Baseando-se nessas questões, a produção desse trabalho tem a proposta de desenvolver
+um sistema com tecnologias e ferramentas populares que possuem demanda por profissionais,
+com o objetivo principal de construir uma documentação
+que abrange todos os aspectos desse sistema e que explique com clareza como o software
+funciona, quais tecnologias foram usadas e como se deu o seu desenvolvimento.
+O código fonte da aplicação e a documentação serão publicados e então esses materiais
+poderiam ser consultados por qualquer pessoa, assim ajudando elas a
+entenderem alguns conceitos de Desenvolvimento de Software e como se dão suas aplicações na prática.
 
 Um software profissional geralmente possui alguns atributos,
 essas características são explicadas nas seções a seguir.
@@ -88,7 +89,7 @@ possuir qualidade. Para isso devemos pontuar que para um código ter qualidade e
 ser légivel.
 
 \begin{quote}
-  ``Muitos programadores iniciantes acham que um bom código é aquele que é correto, ou seja, faz o que tem 
+  ``Muitos programadores iniciantes acham que um bom código é aquele que é correto, ou seja, faz o que tem
   que fazer.''~\cite{Levy04}.
 \end{quote}
 
@@ -127,7 +128,7 @@ riscos para sua manutenção~\cite{deinvestigaccao}.
 Esta sessão destina-se a mostrar a revisão bibliográfica encontrada sobre o tema proposto por este trabalho.
 Pesquisas foram realizadas no Portal de Periódicos da Capes no período de Julho de 2021.
 
-Os termos usados para pesquisa foram `Desenvolvimento de Sistema', `Desenvolvimento de Aplicação', 
+Os termos usados para pesquisa foram `Desenvolvimento de Sistema', `Desenvolvimento de Aplicação',
 `Desenvolvimento de Sistema' AND `Redes Sociais', `Desenvolvimento de Aplicação' AND `Fóruns'.
 
 Foram encontrados trabalhos de desenvolvimento de aplicações com foco em vários negócios. Como agricultura e
@@ -283,7 +284,7 @@ import lombok.Data;
 
 @Entity
 public @Data class Person {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -300,7 +301,7 @@ Hibernate pode criar todos nosso banco de dados baseado nas classes e suas anota
 
 \subsection{Vue.js}
 
-O Vue é um framework para desenvolvimento de aplicações Web, usando a linguagem JavaScript, 
+O Vue é um framework para desenvolvimento de aplicações Web, usando a linguagem JavaScript,
 ele nos permite o desenvolvimento de aplicações reativas e possibilita o reuso
 de código através de componentes. Abaixo um pequeno código HTML de um arquivo vue
 
@@ -327,7 +328,7 @@ import Component from "vue-class-component";
 
 @Component
 export default class About extends Vue {
-  
+
 }
 </script>
 \end{verbatim}
