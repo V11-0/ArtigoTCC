@@ -105,8 +105,8 @@ Um código elegante e testável dá qualidade ao nosso código pois isso facilit
 
 \subsection{Controle de Versão}
 
-Controle de versão é a prática de rastrear e gerenciar mudanças no código do software.~\cite{attlasianGit}
-Essas ferramentas gerenciam o código fonte de projetos ao longo do tempo, possuindo informações detalhadas
+Controle de versão é a prática de rastrear e gerenciar mudanças no código do software~\cite{attlasianGit}.
+Essas ferramentas gerenciam o código fonte de projetos ao longo do tempo, e possuem informações detalhadas
 de todas as modificações que foram realizadas em todos os arquivos do código fonte.
 Alguns dos benefícios que essas ferramentas proporcionam são rastreabilidade (quem fez o quê),
 ajudam na resolução de conflitos e aceleram o desenvolvimento. A ferramenta mais famosa para controle de
@@ -116,18 +116,37 @@ versão atualmente é o Git.
 
 % TODO: Explicar Git e falar da capacidade de devops com ele
 O Git é a ferramenta mais usada para controle de versão. De acordo com seu website, ele
-funciona com o conceito de \textit{commits} e \textit{branches}, o fluxo de um desenvolvimento usando git é
-mostrado na figura~\ref{fig:git-lifecycle}.
+funciona com o conceito de \textit{commits} e \textit{branches}, em que um \textit{commit}
+é uma alteração realizada no código, e uma \textit{branch} é uma ramificação do código, elas são
+exemplificadas na figura~\ref{fig:git-branches}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{git-branches.png}
+  \caption{Exemplos de branches em um repositório Git}\label{fig:git-branches}
+\end{figure}
+
+A figura~\ref{fig:git-branches} mostra três \textit{branches} de um repositório,
+uma chamada \textit{master}, outra de \textit{Feature 1} e uma outra chamada \textit{Feature 2}.
+
+Durante o desenvolvimento de um software, essas ramificações acontecem frequentemente. Nesse exemplo,
+há duas ramificações que foram criadas para desenvolver uma funcionalidade no software, também chamado de \textit{feature},
+ou seja, a partir de uma branch principal \textit{Master}, foram criadas duas \textit{branches} onde o desenvolvimento
+de uma funcionalidade foi feita, e ao final desse desenvolvimento, o código feito nessa \textit{branch} foi
+unido junto com a \textit{branch} principal.
+
+Com o Git instalado em um computador podemos usar o comando \textbf{git} para realizarmos operações.
+Um típico fluxo de um desenvolvimento usando Git é mostrado na figura~\ref{fig:git-lifecycle}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=.8\textwidth]{git-lifecycle.png}
-  \caption{Figura mostrando o ciclo de desenvolvimento com Git}\label{fig:git-lifecycle}
+  \caption{Típico ciclo de desenvolvimento com Git}\label{fig:git-lifecycle}
 \end{figure}
 
-Com o Git instalado em um computador podemos usar o comando \textbf{git} para realizarmos certas operações.
-
-% TODO: Resumir a figura e colocar outra figura sobre branches
+O Git funciona em repositórios, que é uma pasta onde estão os arquivos de código de um sistema,
+a partir desse repositório, modificações são feitas no código, as quais são adicionadas em um \textit{commit}
+e esse \textit{commit} é enviado para um repositório remoto, onde outras pessoas da equipe podem obter as modificações feitas.
 
 \subsection{Documentação de Software}
 
