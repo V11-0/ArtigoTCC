@@ -148,9 +148,11 @@ O Git funciona em repositórios, que é uma pasta onde estão os arquivos de có
 a partir desse repositório, modificações são feitas no código, as quais são adicionadas em um \textit{commit}
 e esse \textit{commit} é enviado para um repositório remoto, onde outras pessoas da equipe podem obter as modificações feitas.
 
+% TODO: Tentar puxar um pouco de pipeline
+
 \subsection{Documentação de Software}
 
-De arcordo com~\cite{Forward02softwaredocumentation}, a documentação de um software é qualquer
+De acordo com~\cite{Forward02softwaredocumentation}, a documentação de um software é qualquer
 artefato que possui como finalidade informar sobre ele, em qualquer um de seus aspectos.
 
 ~\cite{Coelho_2009} nos mostra dois tipos de documentações, são esses tipos
@@ -170,15 +172,13 @@ Ambos os tipos de documentações são muito importantes no processo de desenvol
 baixo nível de qualidade de documentações atrapalham na compreensão do sistema e podem apresentar
 riscos para sua manutenção~\cite{deinvestigaccao}.
 
-\section{Metodologia}
-
-O Projeto e seu desenvolvimento serão feitos com a métodologia ágil Kanban.
+\subsection{Metodologias Ágeis}
 
 As metodologias ágeis surgiram na década de 80 para melhorar a área de desenvolvimento de software,
 que era algo muito rigoroso naquela época, muitos projetos possuiam problemas e as metodologias ágeis foram então
 criadas para tentar solucioná-los.~\cite{Santos05}
 
-\subsection{Kanban}
+\subsubsection{Kanban}
 
 O Kanban é uma metodologia que possui cinco princípios de acordo com~\cite{Agile06}
 \begin{itemize}
@@ -196,14 +196,36 @@ Em um quadro Kanban podemos agrupar tarefas, definir datas e responsáveis, entr
 detalhes, o que facilita a organização e visão das tarefas do projeto.
 
 Existem várias ferramentas que implementam essa metodologia.
-Uma delas é o \emph{Nextcloud Deck}, que é usada para gerenciamento de projetos
-com a metodologia Kanban. A interface desse programa é mostrada na Figura~\ref{fig:nexcloud-deck}.
+Uma delas é o \emph{GitHub Projects}, que usaremos neste trabalho. É usada para gerenciamento de projetos
+com a metodologia Kanban. A interface desse programa é mostrada na Figura~\ref{fig:github-board}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{fig1.png}
-  \caption{Tela do Aplicativo \emph{Nextcloud Deck} mostrando tarefas de um quadro}\label{fig:nexcloud-deck}
+  \includegraphics[width=1\textwidth]{github-board.png}
+  \caption{Tela de um quadro Kanban do \emph{GitHub Projects}}\label{fig:github-board}
 \end{figure}
+
+
+% TODO: Falar de um pouco de Testes unitários aqui
+
+\section{Metodologia}
+
+Para início do desenvolvimento será realizada a definição das tecnologias do sistema, para isso, serão feitas
+pesquisas bibliográficas em websites como \textit{GitHub} e \textit{Stackoverflow}. Estes websites
+são famosos na área de desenvolvimento, além de que eles podem nos fornecer informações interessantes sobre quais
+são as tecnologias mais ativas, mais comentadas e outros dados que podemos usar como base para realizamos
+a escolha das tecnologias.
+
+Com a definição das tecnologias, partiremos para a análise e documentação de requisitos do sistema, e a partir
+dos requisitos serão criados os diagramas de classe e casos de uso.
+
+Para o desenvolvimento, usaremos os recursos oferecidos pela plataforma GitHub, esses recursos serão
+
+\begin{itemize}
+  \item Repositório Git
+  \item Quadro Kanban para gerenciamento de projetos
+  \item Actions para processos de \textit{Pipelines}
+\end{itemize}
 
 \section{Desenvolvimento do Trabalho}
 
