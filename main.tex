@@ -229,8 +229,6 @@ Para o desenvolvimento, usaremos os recursos oferecidos pela plataforma GitHub, 
 
 \section{Desenvolvimento do Trabalho}
 
-// Talvez falar um pouco sobre a arquitetura para justificar as linguagens
-
 Em Maio de 2021 foi realizada pelo site~\cite{stack11}, uma pesquisa com desenvolvedores de todo o mundo para
 coletar dados geográficos, sociais e de uso de tecnologias de seus usuários. Esses dados nos permitem ter
 informações importantes sobre o uso de tecnologias em geral. A pesquisa nos dá três conjuntos
@@ -270,27 +268,27 @@ Figuras~\ref{fig:web-frameworks},~\ref{fig:general-frameworks},~\ref{fig:tools} 
   \caption{Gráfico mostrando os SGBDs mais usados}\label{fig:databases}
 \end{figure}
 
-Baseando-se nesses dados de utilização e na experiência do autor com as tecnologias, foi optado por usar as tecnologias e arquitetura
-apresentadas a seguir.
+Baseando-se nesses dados de utilização e na experiência do autor em certas tecnologias e ferramentas,
+foi optado o uso das tecnologias e arquitetura apresentadas a seguir.
 
 \subsection{Arquitetura}
 
-O sistema terá duas aplicações principais, uma sendo o lado do servidor (backend) e outra sendo
-a aplicação que será usada pelos usuários (frontend).
+O sistema terá duas aplicações principais, uma sendo o lado do servidor (Back-End) e outra sendo
+a aplicação que será usada pelos usuários (Front-End).
 
-O backend será desenvolvido usando o framework ASP.NET Core e
-ele fornecerá um WebService RESTFul.
+O Back-End será um WebService RESTFul, que será desenvolvido com o ASP.NET Core
+junto com a ferramenta de ORM, Entity Framework Core.
 
-o frontend será uma aplicação Web que será desenvolvido com o Framework Vue.js.
+o Front-End será uma aplicação Web que será desenvolvida com o Framework Vue.js.
 
 \subsection{WebService}
 
 Um WebService é um serviço que é oferecido e é por onde aplicações se comunicam com o servidor.
-WebServices fazer parte da arquitetura orientada a serviços (SOA)
+WebServices fazem parte da arquitetura orientada a serviços (SOA).
 
 Um tipo de WebService muito utilizado é o REST, que significa
 \emph{Representational State Transfer} ele funciona servindo requisições de clientes
-para certos serviços. Por Examplo, suponha que um WebService REST tenha uma URL que fornece
+para certos serviços. Por exemplo, suponha que um WebService REST tenha uma URL que fornece
 informações de funcionários
 
 \begin{verbatim}
@@ -298,7 +296,7 @@ informações de funcionários
 \end{verbatim}
 
 GET é o método HTTP usado para requisitar as informações que queremos, então se enviarmos uma requisição
-para a URL com o método esperado, o WebService irá responder a requisição com dados em formato JSON com as informações que queremos
+para a URL com o método esperado, o WebService irá responder a requisição com dados em formato JSON com as informações que queremos, por exemplo:
 
 \begin{verbatim}
   [
@@ -313,46 +311,16 @@ para a URL com o método esperado, o WebService irá responder a requisição co
   ]
 \end{verbatim}
 
-Um WebService REST pode ter muitas URLs, também chamadas de EndPoints.
+Um WebService REST pode ter vários URLs, também chamadas de EndPoints, além de obter informações, podemos realizar
+diferentes operações em diferentes EndPoints, como inserir um objeto no sistema, por exemplo.
 
-\subsection{Spring e Java}
+\subsection{ASP.NET Core}
 
-Java é uma linguagem hoje pertencente a Oracle e é usada em muitas aplicações.
-Spring é um Framework, um conjunto de ferramentas para acelerar o desenvolvimento de aplicações.
-Iremos com o Spring criar o WebService de nosso sistema e junto com uma biblioteca chamada Hibernate
-iremos integrar nosso WebService com um banco de dados.
+Falar do ASP.NET e tal
 
-\subsection{Hibernate}
+\subsection{Entity Framework Core}
 
-O Hibernate é um Framework para o Java que foi originalmente desenvolvido pela RedHat.
-Ele é o que chamamos de ORM, um ORM é um conjunto de ferramentas que faz o mapeamento
-de um banco de dados relacional para classes de Programação Orientada a Objetos.
-Abaixo, um exemplo de uma classe Java mapeada para o Hibernate:
-
-\begin{verbatim}
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import lombok.Data;
-
-@Entity
-public @Data class Person {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String name;
-    private int age;
-}
-\end{verbatim}
-
-O código acima é de uma classe que representa uma Pessoa, repare nas anotações
-\@Id e \@GeneratedValue, elas são chamadas Anotações e contém informações sobre algo.
-Nesse caso estamos dizendo ao Hibernate que o atributo id é um atributo identificador
-e que seu valor será gerado automaticamente no banco de dados. Com essas informações, o
-Hibernate pode criar todos nosso banco de dados baseado nas classes e suas anotações.
+Falar de ORM e do EF
 
 \subsection{Vue.js}
 
@@ -390,28 +358,43 @@ export default class About extends Vue {
 
 O Vue possui um ecosistema de bibliotecas adicionais para ajudar no desenvolvimento de aplicações.
 
-\subsection{Versionamento}
+\subsection{Gerenciamento}
 
-Versionamento de código é algo que sempre deve ser ultilizado, o versionamento nos ajuda a
-organizar e não perder códigos escritos.
+Durante o desenvolvimento do projeto, serão usadas as funcionalidades da plataforma GitHub, isso inclui
+o repositório Git para controle de versão, o quadro Kanban para gerenciamento de Projetos, e \textit{Pipelines}
+para Integração Contínua e processo de \textit{Deployment}.
 
-A ferramenta de versionamento que será usada é o Git e o código será hospedado na plataforma GitHub.
+\subsection{Definição de Requisitos}
+
+Com o processo e as tecnologias definidas. Agora será decidido o domínio do sistema a ser desenvolvido
+e seus requisitos.
+
+Como o foco do trabalho não é o domínio da aplicação, foi optado por copiar o funcionamento de uma aplicação
+existente, a aplicação escolhida é o Reddit.
+
+O Reddit, de acordo com seu website é:
+
+\begin{quote}
+  `A casa de milhares de comunidades, conversas sem
+  limite e interação humana autentica.'
+\end{quote}
+
+O Reddit consiste de comunidades que tratram de determinado assunto, nessas comunidades, usuários
+podem se inscrever e realizar postagens, as quais outros usuários dessa comunidade virão e podem
+dar um voto positivo ou negativo para essa postagem.
 
 \section{Resultados}
 
-O Software proposto foi completado e está dispoível junto com toda a documentação proposta no
-repositório do GitHub
-
-// Espero que esteja em breve
+No estado atual do trabalho, a arquitetura do sistema e seu processo de desenvolvimento foram
+definidos.
 
 \section{Conclusão}
 
 O artigo mostrou problemas existentes no ensino de desenvolvimento de software e propôs
 a criação de um sistema com uma documentação abrangente para ajudar estudandes sobre alguns dos
 conceitos e tecnologias usadas no desenvolvimento de software, além de prover uma abordagem prática
-sobre o assunto. O Trabalho também explicou sobre conceitos de qualidade e sobre as ferramentas usadas
-no desenvolvimento de software e que podem ou não serem usadas no trabalho final
-que esse artigo representa.
+sobre o assunto. O Trabalho também explicou sobre conceitos de qualidade e sobre as ferramentas que
+serão usadas no desenvolvimento do software proposto no trabalho.
 
 \bibliography{bibliografia}
 
