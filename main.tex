@@ -357,12 +357,13 @@ export default class About extends Vue {
 \end{verbatim}
 
 O Vue possui um ecosistema de bibliotecas adicionais para ajudar no desenvolvimento de aplicações.
+Uma dessas bibliotecas é o \textit{Vuetify}, ele fornece para o desenvolvedor componentes para interface
+como botões, cards, campos de textos, etc.
 
 \subsection{Gerenciamento}
 
 Durante o desenvolvimento do projeto, serão usadas as funcionalidades da plataforma GitHub, isso inclui
-o repositório Git para controle de versão, o quadro Kanban para gerenciamento de Projetos, e \textit{Pipelines}
-para Integração Contínua e processo de \textit{Deployment}.
+o repositório Git para controle de versão e o quadro Kanban para gerenciamento de Projetos.
 
 \subsection{Definição de Requisitos}
 
@@ -383,10 +384,52 @@ O Reddit consiste de comunidades que tratram de determinado assunto, nessas comu
 podem se inscrever e realizar postagens, as quais outros usuários dessa comunidade virão e podem
 dar um voto positivo ou negativo para essa postagem.
 
+Foram criados dois diagramas de casos de uso que representam as funcionalidades esperadas no sistema,
+eles são apresentados nas figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_diagram}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{welcome_diagram.png}
+    \caption{Diagrama de caso de uso da tela inicial}\label{fig:welcome_diagram}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{home_diagram.png}
+    \caption{Diagrama de caso de uso da tela \textit{home}}\label{fig:home_diagram}
+\end{figure}
+
+Junto com os casos de uso foram definidos as propiedades das entidades do sistema
+a partir da criação de um diagrama de classe, o diagrama resultante é exibido na figura~\ref{fig:classes_diagram}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{classes_diagram.png}
+    \caption{Diagrama de classes do sistema}\label{fig:classes_diagram}
+\end{figure}
+
+\subsection{Implementação}
+
+A ferramenta de desenvolvimento usada para a implementação das aplicações tanto
+do Front-End em Vue quanto do Back-End com C\# foi o Visual Studio Code
+
 \section{Resultados}
 
-No estado atual do trabalho, a arquitetura do sistema e seu processo de desenvolvimento foram
-definidos.
+No estado atual do trabalho, o desenvolvimento está em rítimo acelerado e alguns
+dos requisitos propostos foram implementados, dois \textit{prints} do sistemas
+são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{prints/welcome.png}
+    \caption{Tela de bem-vindo}\label{fig:welcome}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{prints/home.png}
+    \caption{Tela \textit{home}}\label{fig:home}
+\end{figure}
 
 \section{Conclusão}
 
