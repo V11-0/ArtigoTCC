@@ -114,7 +114,6 @@ versão atualmente é o Git.
 
 \subsubsection{Git}
 
-% TODO: Explicar Git e falar da capacidade de devops com ele
 O Git é a ferramenta mais usada para controle de versão. De acordo com seu website, ele
 funciona com o conceito de \textit{commits} e \textit{branches}, em que um \textit{commit}
 é uma alteração realizada no código, e uma \textit{branch} é uma ramificação do código, elas são
@@ -122,7 +121,7 @@ exemplificadas na figura~\ref{fig:git-branches}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{git-branches.png}
+  \includegraphics[width=1\textwidth]{git/git-branches.png}
   \caption{Exemplos de branches em um repositório Git}\label{fig:git-branches}
 \end{figure}
 
@@ -140,15 +139,13 @@ Um típico fluxo de um desenvolvimento usando Git é mostrado na figura~\ref{fig
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{git-lifecycle.png}
+  \includegraphics[width=.8\textwidth]{git/git-lifecycle.png}
   \caption{Típico ciclo de desenvolvimento com Git}\label{fig:git-lifecycle}
 \end{figure}
 
 O Git funciona em repositórios, que é uma pasta onde estão os arquivos de código de um sistema,
 a partir desse repositório, modificações são feitas no código, as quais são adicionadas em um \textit{commit}
 e esse \textit{commit} é enviado para um repositório remoto, onde outras pessoas da equipe podem obter as modificações feitas.
-
-% TODO: Tentar puxar um pouco de pipeline
 
 \subsection{Documentação de Software}
 
@@ -201,7 +198,7 @@ com a metodologia Kanban. A interface desse programa é mostrada na Figura~\ref{
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{github-board.png}
+  \includegraphics[width=1\textwidth]{github/github-board.png}
   \caption{Tela de um quadro Kanban do \emph{GitHub Projects}}\label{fig:github-board}
 \end{figure}
 
@@ -246,25 +243,25 @@ Figuras~\ref{fig:web-frameworks},~\ref{fig:general-frameworks},~\ref{fig:tools} 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{web_frameworks_usage.png}
+  \includegraphics[width=1\textwidth]{stackoverflow/web_frameworks_usage.png}
   \caption{Gráfico mostrando os frameworks Web mais usados}\label{fig:web-frameworks}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{general_framework_usage.png}
+  \includegraphics[width=1\textwidth]{stackoverflow/general_framework_usage.png}
   \caption{Gráfico mostrando os frameworks gerais mais usados}\label{fig:general-frameworks}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{used_tools.png}
+  \includegraphics[width=1\textwidth]{stackoverflow/used_tools.png}
   \caption{Gráfico mostrando as ferramentas mais usadas}\label{fig:tools}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{databases.png}
+  \includegraphics[width=1\textwidth]{stackoverflow/databases.png}
   \caption{Gráfico mostrando os SGBDs mais usados}\label{fig:databases}
 \end{figure}
 
@@ -316,11 +313,32 @@ diferentes operações em diferentes EndPoints, como inserir um objeto no sistem
 
 \subsection{ASP.NET Core}
 
-Falar do ASP.NET e tal
+O ASP.NET Core faz parte da família de tecnologias .NET que são desenvolvidas pela Microsoft.
+Ele nos permite criar qualquer tipo de aplicação web.
+
+A Plataforma .NET possui uma longa história, por grande parte dessa história, suas
+tecnologias foram exclusivas para o sistema operacional Windows. Em 2014 a Microsoft recriou
+essa plataforma do zero, hoje toda a plataforma é \textit{open-source} e funciona em qualquer
+sistema operacional.
 
 \subsection{Entity Framework Core}
 
-Falar de ORM e do EF
+O Entity Framework Core é um framework ORM que é usado em conjunto com o .NET.
+Como explicitado por~\cite{ormHibernate}
+
+\begin{quote}
+  `Um framework ORM provê uma metodologia e mecanismo
+  para sistemas orientados a objetos manterem seus dados em um banco de dados de maneira
+  segura, com controle de transações, e tudo isso expressado em código orientado a objeto'.
+\end{quote}
+
+De maneira prática, um ORM permite manipularmos entidades em um banco de daddos
+sem precisarmos mexer com SQL. Eles geralmente funcionam mapeando as classes
+que criamos em nosso código, e com essas informações ele cria o banco de dados já com os relacionamentos
+entre as tabelas e tudo mais o que definimos nas classes.
+
+O Entity Framework é o ORM oficial do .NET, possui amplo suporte e uso. Ele será
+usado nesse projeto para facilitar a manipulação dos dados no banco de dados.
 
 \subsection{Vue.js}
 
@@ -389,13 +407,13 @@ eles são apresentados nas figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_dia
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{welcome_diagram.png}
+    \includegraphics[width=0.7\textwidth]{diagrams/welcome_diagram.png}
     \caption{Diagrama de caso de uso da tela inicial}\label{fig:welcome_diagram}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{home_diagram.png}
+    \includegraphics[width=0.7\textwidth]{diagrams/home_diagram.png}
     \caption{Diagrama de caso de uso da tela \textit{home}}\label{fig:home_diagram}
 \end{figure}
 
@@ -404,7 +422,7 @@ a partir da criação de um diagrama de classe, o diagrama resultante é exibido
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{classes_diagram.png}
+    \includegraphics[width=0.8\textwidth]{diagrams/classes_diagram.png}
     \caption{Diagrama de classes do sistema}\label{fig:classes_diagram}
 \end{figure}
 
