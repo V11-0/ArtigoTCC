@@ -8,6 +8,9 @@
 \usepackage[alf]{abntex2cite}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{soul}
+\usepackage{color}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
 
 \graphicspath{{\main/imagens/}{imagens/}}
 
@@ -398,12 +401,14 @@ O Reddit, de acordo com seu website é:
   limite e interação humana autentica.'
 \end{quote}
 
-O Reddit consiste de comunidades que tratram de determinado assunto, nessas comunidades, usuários
+O Reddit consiste de comunidades que tratam de determinado assunto, nessas comunidades, usuários
 podem se inscrever e realizar postagens, as quais outros usuários dessa comunidade virão e podem
 dar um voto positivo ou negativo para essa postagem.
 
 Foram criados dois diagramas de casos de uso que representam as funcionalidades esperadas no sistema,
 eles são apresentados nas figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_diagram}
+
+%TODO Diagrama está com nome antigo [Simple Forum]
 
 \begin{figure}[H]
     \centering
@@ -425,6 +430,8 @@ a partir da criação de um diagrama de classe, o diagrama resultante é exibido
     \includegraphics[width=0.8\textwidth]{diagrams/classes_diagram.png}
     \caption{Diagrama de classes do sistema}\label{fig:classes_diagram}
 \end{figure}
+
+\hl{Talvez explicar um pouco sobre o diagrama?}
 
 \subsection{Ambiente de Desenvolvimento}
 
@@ -449,6 +456,8 @@ Como mencionado anteriormente, foi utilizado a metodologia Kanban para gerenciam
 de tarefas, o desenvolvimento seguiu de maneira confortável tarefa por tarefa
 criada no quadro. Algumas mudanças foram realizadas no escopo conforme o necessário durante o desenvolvimento.
 
+\hl{Melhorar esse paragrafo}
+
 \subsection{Documentação}
 
 Após a finalização da implementação dos sistemas, foi iniciado o processo de documentação
@@ -459,9 +468,9 @@ e outra para a API em \textit{.NET}
 \section{Resultados}
 
 % Mudar Status
-No estado atual do trabalho, o desenvolvimento está em rítimo acelerado e alguns
-dos requisitos propostos foram implementados, dois \textit{prints} do sistemas
-são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
+No o desenvolvimento foi finalizado com a maioria dos
+requisitos prospostos inicialmente implementados, dois \textit{prints} da aplicação
+Web são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
 
 \begin{figure}[H]
     \centering
@@ -476,14 +485,28 @@ são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
 \end{figure}
 
 % Falar sobre a API, talvez colocar swagger aqui?
+O Desenvolvimento da API em .NET foi finalizadada e todas as funcionalidades
+usadas pela aplicação Web foram implementadas com restrições de acesso e esquemas de
+segurança, um \textit{print} dos endpoints disponíveis nessa API é exibido
+na figura~\ref{fig:swagger} através da biblioteca Swagger
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{prints/swagger.png}
+    \caption{Print da tela do Swagger}\label{fig:swagger}
+\end{figure}
+
+\hl{Escrever sobre a documentacao e melhorar texto sobre a implementacao}
 
 \section{Conclusão}
 
 O artigo mostrou problemas existentes no ensino de desenvolvimento de software e propôs
 a criação de um sistema com uma documentação abrangente para ajudar estudandes sobre alguns dos
 conceitos e tecnologias usadas no desenvolvimento de software, além de prover uma abordagem prática
-sobre o assunto. O Trabalho também explicou sobre conceitos de qualidade e sobre as ferramentas que
-serão usadas no desenvolvimento do software proposto no trabalho.
+sobre o assunto. O Desenvolvimento e a criação da documentação do Software proposto está
+quase sendo finalizado e todo esse material está disponível na plataforma \textit{GitHub}
+para que estudantes do Curso do ADS e outros estudantes interessados possam usufruir e adiquirir
+conhecimentos através desse material.
 
 \bibliography{bibliografia}
 
