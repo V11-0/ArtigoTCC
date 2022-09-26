@@ -2,10 +2,8 @@
 
 \usepackage{sbc-template}
 
-\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 
-\usepackage[alf]{abntex2cite}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{soul}
@@ -14,72 +12,114 @@
 
 \graphicspath{{\main/imagens/}{imagens/}}
 
-\AtBeginEnvironment{quote}{\smaller} % Step font down one size relative to current font.
-
 \sloppy
 
-\title{\normalfont{Desenvolvimento de Documentação e Implementação de Sistema de Informação
-para Auxílio na Aprendizagem de Qualidade de Software}}
+\title{
+    Desenvolvimento de documentação e implementação de sistema de informação para
+    contribuir na formação do perfil de analista de sistemas
+}
 
 \author{Vinícius B. Bruscagini\inst{1}, Carlos R. S. Júnior\inst{1}}
 
-\address{Instituto Federal de Educação, Ciência e Tecnologia do Estado de São Paulo\\Campus Hortolândia (IFSP-HTO)
-\email{vinicius.bruscagini@aluno.ifsp.edu.br, carlos.rsantos@ifsp.edu.br}}
+\address{
+    Instituto Federal de Educação, Ciência e Tecnologia do Estado de São Paulo\\
+    Campus Hortolândia (IFSP-HTO)
+    \email{vinicius.bruscagini@aluno.ifsp.edu.br, carlos.rsantos@ifsp.edu.br}
+}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-  This paper has the objective to create an App using famous technologies and tools
-  avaliable on the market. Applying software quality and project management concepts.
-  A documentation covering all the aspects of the system will be released to help students
-  and developers understand these concepts in a practical way.
+  Regarding difficulties in universities for adapting emerging technologies into curriculum, this paper
+  has the objective to create a technical software documentation based in a developed software that
+  uses consolidated market technologies. Containing simple and comprehensive language to contribute
+  with the formation of IT students.
 \end{abstract}
 
 \begin{resumo}
-  Este trabalho possui o objetivo de criar um sistema de informação utilizando tecnologias e ferramentas
-  famosas no mercado, aplicando conceitos de qualidade de software e gerenciamento de projetos.
-  Será disponibilizado um material que documentará todos os aspectos desse sistema, de forma a ajudar
-  estudantes e desenvolvidores a entenderem como funcionam conceitos de qualidade de software na prática.
+  Com a dificuldade de adequação das instituições de ensino em relação a novas tecnologias, este trabalho possui como principal objetivo
+  disponibilizar uma documentação técnica de um \textit{software} desenvolvido com tecnologias
+  consolidadas no mercado. Com uma linguagem simples e compreensível para colaborar na formação
+  de alunos dos cursos de Análise e Desenvolvimento de Sistemas.
 \end{resumo}
 
 \section{Introdução}
 
-A área de TI, incluindo desenvolvimento de software, é uma área que evoluiu muito nas ultimas
-décadas~\cite{Pacheco10} e continua evoluindo rapidamente até hoje. Novas Tecnologias e ferramentas
+A área de TI (Tecnologia da Informação), é uma área que evoluiu muito nas ultimas
+décadas~\cite{Pacheco10} e continua evoluindo rapidamente. Novas Tecnologias e ferramentas
 surgem em rítmo acelerado e muitas delas ganham popularidade, demandando assim, novas
-habilidades para os profissionais de TI\@. Com essa evolução, os cursos oferecidos nessa área não conseguem
-oferecer disciplinas sobre tecnologias usadas no mercado. O ensino, então, não propicia o aprendizado
-suficiente para os profissionais de TI, fazendo com que muitos desses busquem cursos ou certificações para
-aprimorar seus conhecimentos.~\cite{macedo09}. Além disso, de acordo com uma pesquisa realizada por
-~\cite{wei08} os alunos de cursos de Engenharia de Software se preocupam em possuir um aprendizado
-voltado para prática e sempre ter convivência com conceitos e métodos importantes para o mercado de trabalho.
+habilidades para os profissionais de TI\@. Com essa evolução, há uma dificuldade por parte das
+instituições de ensino para ofertar conteúdos sobre essas habilidades para estudantes, fazendo com que
+muitos desses busquem cursos ou certificações para aprimorar seus conhecimentos.~\cite{macedo09}.
+Além disso, de acordo com uma pesquisa realizada por~\cite{wei08} os alunos de cursos de como Engenharia de \textit{Software}
+se preocupam em possuir um aprendizado voltado para prática e sempre ter convivência com conceitos
+e métodos importantes para o mercado de trabalho.
 
 Baseando-se nessas questões, a produção desse trabalho tem a proposta de desenvolver
 um sistema com tecnologias e ferramentas populares que possuem demanda por profissionais,
 com o objetivo principal de construir uma documentação
 que abrange todos os aspectos desse sistema e que explique com clareza como o software
-funciona, quais tecnologias foram usadas e como se deu o seu desenvolvimento.
-O código fonte da aplicação e a documentação serão publicados e então esses materiais
-poderiam ser consultados por qualquer pessoa, assim ajudando elas a
-entenderem alguns conceitos de Desenvolvimento de Software e como se dão suas aplicações na prática.
+funciona, quais tecnologias foram usadas e como se deu o seu desenvolvimento. Assim ajudando estudantes a
+entenderem alguns conceitos de desenvolvimento de software e como se dão suas aplicações na prática.
 
-\section{Fundamentação Teórica}
+% TODO: Falar do Desenvolvimento
 
-Para atingirmos um software conforme descrito na seção anterior, precisamos entender
-alguns conceitos importantes dessa área.
+Esse artigo possui a seguinte organização: A seção~\ref{FundamentacaoTeorica} nomeada Fundamentação Teórica,
+evidencia em subseções os conceitos empregados durante o desenvolvimento deste trabalho. Na sequencia,
+a seção~\ref{Metodologia} nomeada Metodologia, descreve o processo realizado para esse desenvolvimento.
+A seção~\ref{Desenvolvimento}, Desenvolvimento do Trabalho, mostra as etapas de desenvolvimento para chegar ao objetivo do trabalho, divididos em subseções.
+A seção~\ref{Resultados} de Resultados, mostra o que foi implementado e documentado de acordo com o objetivo do trabalho.
+Por último a seção~\ref{Conclusao}, Conclusão, resume todo o artigo e mostra possíveis trabalhos futuros.
+
+\section{Fundamentação Teórica}\label{FundamentacaoTeorica}
+
+Nessa seção são apresentados conceitos relacionados ao desenvolvimento de \textit{software} e gerenciamento
+de projetos. Esses conceitos foram empregados para realizar o desenvolvimento do \textit{software} conforme descrito na seção anterior.
 
 \subsection{Framework}
 
-Um conceito importante no desenvolvimento de sistemas é o `Framework', de acordo com~\cite{host12} um
-framework é como um template que conta com diversas funcionalidades. Ele possui o objetivo principal de
+Um conceito importante no desenvolvimento de sistemas é o \textit{framework}, de acordo com~\cite{host12} um
+\textit{framework} é como um template que conta com diversas funcionalidades. Ele possui o objetivo principal de
 resolver problemas recorrentes no desenvolvimento e acelerar esse processo. O
 Projeto Pedagógico do Curso de Análise e Desenvolvimento de Sistemas do IFSP - Campus Hortolândia
 contém uma disciplina que ensina o uso de um framework para o desenvolvimento. No entanto, a bibliografia básica
-que aborda esse framework é do ano de 2010 e faz uso da tecnologia JSF, que hoje em dia é muito pouco usada.~\cite{webtechsurveyJSF}
+que aborda esse \textit{framework} é do ano de 2010 e faz uso da tecnologia JSF (\textit{Java Server Pages}), que hoje em dia é muito pouco usada.~\cite{webtechsurveyJSF}
 
-% explicar o que é qualidade e arquitetura de "sistema de produção"
+\subsection{WebService}\label{WebService}
+
+Um \textit{WebService} é um serviço que é oferecido e é por onde aplicações se comunicam com o servidor.
+WebServices fazem parte da arquitetura orientada a serviços (SOA).
+
+Um tipo de \textit{WebService} muito utilizado é o REST, que significa
+\emph{Representational State Transfer} ele funciona servindo requisições de clientes
+para certos serviços. Por exemplo, suponha que um \textit{WebService} REST tenha uma \textit{URL} que fornece
+informações de funcionários
+
+\begin{verbatim}
+  GET http://meuwebservice/funcionarios
+\end{verbatim}
+
+\textit{GET} é o método HTTP usado para requisitar as informações que queremos, então se enviarmos uma requisição
+para a URL com o método esperado, o \textit{WebService} irá responder a requisição com dados em formato \textit{JSON} com as informações que queremos, por exemplo:
+
+\begin{verbatim}
+  [
+    {
+      "nome": "Aline",
+      "departamento": "Engenharia"
+    },
+    {
+      "nome": "João",
+      "departamento": "Finanças"
+    }
+  ]
+\end{verbatim}
+
+Um \textit{WebService} REST pode ter vários URLs, também chamadas de \textit{endpoints}, além de obter informações, podemos realizar
+diferentes operações em diferentes \textit{endpoints}, como inserir um objeto no sistema, por exemplo.
+
 \subsection{Qualidade de Software}
 
 A definição de qualidade no contexto da computação nem sempre é um consenso,
@@ -113,14 +153,14 @@ Essas ferramentas gerenciam o código fonte de projetos ao longo do tempo, e pos
 de todas as modificações que foram realizadas em todos os arquivos do código fonte.
 Alguns dos benefícios que essas ferramentas proporcionam são rastreabilidade (quem fez o quê),
 ajudam na resolução de conflitos e aceleram o desenvolvimento. A ferramenta mais famosa para controle de
-versão atualmente é o Git.
+versão atualmente é o \textit{Git}.
 
 \subsubsection{Git}
 
-O Git é a ferramenta mais usada para controle de versão. De acordo com seu website, ele
+O \textit{Git} é a ferramenta mais usada para controle de versão. De acordo com seu website, ele
 funciona com o conceito de \textit{commits} e \textit{branches}, em que um \textit{commit}
 é uma alteração realizada no código, e uma \textit{branch} é uma ramificação do código, elas são
-exemplificadas na figura~\ref{fig:git-branches}.
+exemplificadas na Figura~\ref{fig:git-branches}.
 
 \begin{figure}[H]
   \centering
@@ -128,17 +168,17 @@ exemplificadas na figura~\ref{fig:git-branches}.
   \caption{Exemplos de branches em um repositório Git}\label{fig:git-branches}
 \end{figure}
 
-A figura~\ref{fig:git-branches} mostra três \textit{branches} de um repositório,
+A Figura~\ref{fig:git-branches} mostra três \textit{branches} de um repositório,
 uma chamada \textit{master}, outra de \textit{Feature 1} e uma outra chamada \textit{Feature 2}.
 
-Durante o desenvolvimento de um software, essas ramificações acontecem frequentemente. Nesse exemplo,
-há duas ramificações que foram criadas para desenvolver uma funcionalidade no software, também chamado de \textit{feature},
+Durante o desenvolvimento de um \textit{software}, essas ramificações acontecem frequentemente. Nesse exemplo,
+há duas ramificações que foram criadas para desenvolver uma funcionalidade no \textit{software}, também chamado de \textit{feature},
 ou seja, a partir de uma branch principal \textit{Master}, foram criadas duas \textit{branches} onde o desenvolvimento
 de uma funcionalidade foi feita, e ao final desse desenvolvimento, o código feito nessa \textit{branch} foi
 unido junto com a \textit{branch} principal.
 
-Com o Git instalado em um computador podemos usar o comando \textbf{git} para realizarmos operações.
-Um típico fluxo de um desenvolvimento usando Git é mostrado na figura~\ref{fig:git-lifecycle}.
+Com o \textit{software} instalado em um computador podemos usar o comando \verb|git| para realizarmos operações.
+Um típico fluxo de um desenvolvimento usando \textit{Git} é mostrado na Figura~\ref{fig:git-lifecycle}.
 
 \begin{figure}[H]
   \centering
@@ -146,13 +186,13 @@ Um típico fluxo de um desenvolvimento usando Git é mostrado na figura~\ref{fig
   \caption{Típico ciclo de desenvolvimento com Git}\label{fig:git-lifecycle}
 \end{figure}
 
-O Git funciona em repositórios, que é uma pasta onde estão os arquivos de código de um sistema,
+O \textit{Git} funciona em repositórios, que é uma pasta onde estão os arquivos de código de um sistema,
 a partir desse repositório, modificações são feitas no código, as quais são adicionadas em um \textit{commit}
 e esse \textit{commit} é enviado para um repositório remoto, onde outras pessoas da equipe podem obter as modificações feitas.
 
 \subsection{Documentação de Software}
 
-De acordo com~\cite{Forward02softwaredocumentation}, a documentação de um software é qualquer
+De acordo com~\cite{Forward02softwaredocumentation}, a documentação de um \textit{software} é qualquer
 artefato que possui como finalidade informar sobre ele, em qualquer um de seus aspectos.
 
 ~\cite{Coelho_2009} nos mostra dois tipos de documentações, são esses tipos
@@ -180,7 +220,7 @@ criadas para tentar solucioná-los.~\cite{Santos05}
 
 \subsubsection{Kanban}
 
-O Kanban é uma metodologia que possui cinco princípios de acordo com~\cite{Agile06}
+O \textit{Kanban} é uma metodologia que possui cinco princípios de acordo com~\cite{Agile06}
 \begin{itemize}
   \item Visualização
   \item Limitar o desenvolvimento em progresso
@@ -189,7 +229,7 @@ O Kanban é uma metodologia que possui cinco princípios de acordo com~\cite{Agi
   \item Reconhecimento de oportunidades
 \end{itemize}
 
-O Kanban funciona com quadros, onde em cada quadro temos várias seções.
+O \textit{Kanban} funciona com quadros, onde em cada quadro temos várias seções.
 Nessas seções podemos agrupar tarefas.
 
 Em um quadro Kanban podemos agrupar tarefas, definir datas e responsáveis, entre vários outros
@@ -197,7 +237,7 @@ detalhes, o que facilita a organização e visão das tarefas do projeto.
 
 Existem várias ferramentas que implementam essa metodologia.
 Uma delas é o \emph{GitHub Projects}, que usaremos neste trabalho. É usada para gerenciamento de projetos
-com a metodologia Kanban. A interface desse programa é mostrada na Figura~\ref{fig:github-board}.
+com a metodologia \textit{Kanban}. A interface desse programa é mostrada na Figura~\ref{fig:github-board}.
 
 \begin{figure}[H]
   \centering
@@ -208,26 +248,26 @@ com a metodologia Kanban. A interface desse programa é mostrada na Figura~\ref{
 
 % TODO: Falar de um pouco de Testes unitários aqui
 
-\section{Metodologia}
+\section{Metodologia}\label{Metodologia}
 
-Para início do desenvolvimento será realizada a definição das tecnologias do sistema, para isso, serão feitas
-pesquisas bibliográficas em websites como \textit{GitHub} e \textit{Stackoverflow}. Estes websites
-são famosos na área de desenvolvimento, além de que eles podem nos fornecer informações interessantes sobre quais
-são as tecnologias mais ativas, mais comentadas e outros dados que podemos usar como base para realizamos
-a escolha das tecnologias.
+Para início do desenvolvimento foi realizada a definição das tecnologias do sistema, para isso, foram feitas
+pesquisas bibliográficas em \textit{WebSites} como \textit{GitHub} e \textit{Stackoverflow}. Estes \textit{WebSites}
+são famosos na área de desenvolvimento, eles forneceram informações importantes sobre quais
+são as tecnologias mais ativas, mais comentadas e outros dados que foram usados para a escolha das tecnologias
+usadas no desenvolvimento do sistema.
 
-Com a definição das tecnologias, partiremos para a análise e documentação de requisitos do sistema, e a partir
-dos requisitos serão criados os diagramas de classe e casos de uso.
+Com as tecnologias definidas, o próximo passo foi a análise e documentação de requisitos do sistema,
+e com esses requisitos, foram criados diagramas de classes e casos de uso.
 
-Para o desenvolvimento, usaremos os recursos oferecidos pela plataforma GitHub, esses recursos serão
+Para o desenvolvimento, foram usados recursos oferecidos pela plataforma \textit{GitHub}, esses recursos são:
 
 \begin{itemize}
-  \item Repositório Git
-  \item Quadro Kanban para gerenciamento de projetos
-  \item Actions para processos de \textit{Pipelines}
+  \item Repositório \textit{Git}
+  \item Quadro \textit{Kanban} para gerenciamento de projetos
+  \item \textit{Wiki} onde será criada a documentação técnica do sistema
 \end{itemize}
 
-\section{Desenvolvimento do Trabalho}
+\section{Desenvolvimento do Trabalho}\label{Desenvolvimento}
 
 Em Maio de 2021 foi realizada pelo site~\cite{stack11}, uma pesquisa com desenvolvedores de todo o mundo para
 coletar dados geográficos, sociais e de uso de tecnologias de seus usuários. Esses dados nos permitem ter
@@ -269,85 +309,49 @@ Figuras~\ref{fig:web-frameworks},~\ref{fig:general-frameworks},~\ref{fig:tools} 
 \end{figure}
 
 Baseando-se nesses dados de utilização e na experiência do autor em certas tecnologias e ferramentas,
-foi optado o uso das tecnologias e arquitetura apresentadas a seguir.
+foi optado o uso das tecnologias e arquitetura apresentadas nas próximas seções.
 
-\subsection{Arquitetura}
+\subsection{Arquitetura e Tecnologias}
 
-O sistema terá duas aplicações principais, uma sendo o lado do servidor (Back-End) e outra sendo
-a aplicação que será usada pelos usuários (Front-End).
+A arquitetura escolhida para o sistema foi um \textit{WebService REST}, como mostrado na seção~\ref{WebService}.
+Além do \textit{WebService} foi decidido a criação de uma aplicação cliente que acesse o \textit{WebService}.
 
-O Back-End será um WebService RESTFul, que será desenvolvido com o ASP.NET Core
-junto com a ferramenta de ORM, Entity Framework Core.
+As tecnologias que foram usadas para a implementação dessas aplicações são apresentadas nas próximas seções.
 
-o Front-End será uma aplicação Web que será desenvolvida com o Framework Vue.js.
+\subsubsection{ASP.NET Core}
 
-\subsection{WebService}
+O \textit{ASP.NET Core} faz parte da família de tecnologias \textit{.NET} que são desenvolvidas pela \textit{Microsoft}.
+Ele nos permite criar qualquer tipo de aplicação \textit{web}.
 
-Um WebService é um serviço que é oferecido e é por onde aplicações se comunicam com o servidor.
-WebServices fazem parte da arquitetura orientada a serviços (SOA).
-
-Um tipo de WebService muito utilizado é o REST, que significa
-\emph{Representational State Transfer} ele funciona servindo requisições de clientes
-para certos serviços. Por exemplo, suponha que um WebService REST tenha uma URL que fornece
-informações de funcionários
-
-\begin{verbatim}
-  GET http://meuwebservice/funcionarios
-\end{verbatim}
-
-GET é o método HTTP usado para requisitar as informações que queremos, então se enviarmos uma requisição
-para a URL com o método esperado, o WebService irá responder a requisição com dados em formato JSON com as informações que queremos, por exemplo:
-
-\begin{verbatim}
-  [
-    {
-      "nome": "João",
-      "departamento": "Contabilidade"
-    },
-    {
-      "nome": "Bianca",
-      "departamento": "Engenharia"
-    }
-  ]
-\end{verbatim}
-
-Um WebService REST pode ter vários URLs, também chamadas de EndPoints, além de obter informações, podemos realizar
-diferentes operações em diferentes EndPoints, como inserir um objeto no sistema, por exemplo.
-
-\subsection{ASP.NET Core}
-
-O ASP.NET Core faz parte da família de tecnologias .NET que são desenvolvidas pela Microsoft.
-Ele nos permite criar qualquer tipo de aplicação web.
-
-A Plataforma .NET possui uma longa história, por grande parte dessa história, suas
-tecnologias foram exclusivas para o sistema operacional Windows. Em 2014 a Microsoft recriou
+A Plataforma \textit{.NET} possui uma longa história, por grande parte dessa história, suas
+tecnologias foram exclusivas para o sistema operacional \textit{Windows}. Em 2014 a \textit{Microsoft} recriou
 essa plataforma do zero, hoje toda a plataforma é \textit{open-source} e funciona em qualquer
 sistema operacional.
 
-\subsection{Entity Framework Core}
+\subsubsection{Entity Framework Core}
 
-O Entity Framework Core é um framework ORM que é usado em conjunto com o .NET.
-Como explicitado por~\cite{ormHibernate}
+O \textit{Entity Framework Core} é um \textit{framework ORM} que é usado em conjunto com o \textit{.NET}
+como explicitado por~\cite{ormHibernate}:
 
 \begin{quote}
-  `Um framework ORM provê uma metodologia e mecanismo
+  `Um \textit{framework ORM} provê uma metodologia e mecanismo
   para sistemas orientados a objetos manterem seus dados em um banco de dados de maneira
   segura, com controle de transações, e tudo isso expressado em código orientado a objeto'.
 \end{quote}
 
-De maneira prática, um ORM permite manipularmos entidades em um banco de daddos
-sem precisarmos mexer com SQL. Eles geralmente funcionam mapeando as classes
+De maneira prática, um \textit{ORM} permite manipularmos entidades em um banco de dados
+sem precisarmos mexer com \textit{SQL}. Eles geralmente funcionam mapeando as classes
 que criamos em nosso código, e com essas informações ele cria o banco de dados já com os relacionamentos
 entre as tabelas e tudo mais o que definimos nas classes.
 
-O Entity Framework é o ORM oficial do .NET, possui amplo suporte e uso. Ele será
+O \textit{Entity Framework} é o \textit{ORM} oficial do \textit{.NET}, possui amplo suporte e uso. Ele será
 usado nesse projeto para facilitar a manipulação dos dados no banco de dados.
 
-\subsection{Vue.js}
+\subsubsection{Vue.js}
 
-O Vue é um framework para desenvolvimento de aplicações Web, usando a linguagem JavaScript,
+O \textit{Vue} é um \textit{framework} para desenvolvimento de aplicações \textit{web}, usando a linguagem \textit{JavaScript},
 ele nos permite o desenvolvimento de aplicações reativas e possibilita o reuso
-de código através de componentes. Abaixo um pequeno código HTML de um arquivo vue
+de código através de componentes. Abaixo um pequeno código \textit{HTML} de um arquivo vue
 
 \begin{verbatim}
   <div>
@@ -355,11 +359,11 @@ de código através de componentes. Abaixo um pequeno código HTML de um arquivo
   </div>
 \end{verbatim}
 
-Esse trecho de código exibe o texto `Agora você me viu' caso a variável `seen' seja verdadeira.
+Esse trecho de código exibe o texto `Agora você me viu' caso a variável \verb|seen| seja verdadeira.
 
-O Vue nos dá a opção de usar a linguagem TypeScript ao invês do JavaScript, ele possui
+O \textit{Vue} nos dá a opção de usar a linguagem \textit{TypeScript} ao invês do \textit{JavaScript}, ele possui
 várias bibliotecas que melhoram a legibilidade e arquitetura de um componente vue.
-Abaixo um código de um componente Vue usando TypeScript
+Abaixo um código de um componente \textit{Vue} usando \textit{TypeScript}
 
 \begin{verbatim}
 <template>
@@ -377,14 +381,9 @@ export default class About extends Vue {
 </script>
 \end{verbatim}
 
-O Vue possui um ecosistema de bibliotecas adicionais para ajudar no desenvolvimento de aplicações.
+O \textit{Vue} possui um ecosistema de bibliotecas adicionais para ajudar no desenvolvimento de aplicações.
 Uma dessas bibliotecas é o \textit{Vuetify}, ele fornece para o desenvolvedor componentes para interface
 como botões, cards, campos de textos, etc.
-
-\subsection{Gerenciamento}
-
-Durante o desenvolvimento do projeto, serão usadas as funcionalidades da plataforma GitHub, isso inclui
-o repositório Git para controle de versão e o quadro Kanban para gerenciamento de Projetos.
 
 \subsection{Definição de Requisitos}
 
@@ -392,38 +391,39 @@ Com o processo e as tecnologias definidas. Agora será decidido o domínio do si
 e seus requisitos.
 
 Como o foco do trabalho não é o domínio da aplicação, foi optado por copiar o funcionamento de uma aplicação
-existente, a aplicação escolhida é o Reddit.
+existente, a aplicação escolhida é o \textit{Reddit}.
 
-O Reddit, de acordo com seu website é:
+O \textit{Reddit}, de acordo com seu website é:
 
 \begin{quote}
   `A casa de milhares de comunidades, conversas sem
   limite e interação humana autentica.'
 \end{quote}
 
-O Reddit consiste de comunidades que tratam de determinado assunto, nessas comunidades, usuários
+O \textit{Reddit} consiste de comunidades que tratam de determinado assunto, nessas comunidades, usuários
 podem se inscrever e realizar postagens, as quais outros usuários dessa comunidade virão e podem
 dar um voto positivo ou negativo para essa postagem.
 
 Foram criados dois diagramas de casos de uso que representam as funcionalidades esperadas no sistema,
-eles são apresentados nas figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_diagram}
+eles são apresentados nas Figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_diagram}.
 
 %TODO Diagrama está com nome antigo [Simple Forum]
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{diagrams/welcome_diagram.png}
+    \includegraphics[width=0.6\textwidth]{diagrams/welcome_diagram.png}
     \caption{Diagrama de caso de uso da tela inicial}\label{fig:welcome_diagram}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{diagrams/home_diagram.png}
+    \includegraphics[width=0.6\textwidth]{diagrams/home_diagram.png}
     \caption{Diagrama de caso de uso da tela \textit{home}}\label{fig:home_diagram}
 \end{figure}
 
 Junto com os casos de uso foram definidos as propiedades das entidades do sistema
-a partir da criação de um diagrama de classe, o diagrama resultante é exibido na figura~\ref{fig:classes_diagram}
+a partir da criação de um diagrama de classe, o diagrama resultante é exibido
+na Figura~\ref{fig:classes_diagram}.
 
 \begin{figure}[H]
     \centering
@@ -431,46 +431,43 @@ a partir da criação de um diagrama de classe, o diagrama resultante é exibido
     \caption{Diagrama de classes do sistema}\label{fig:classes_diagram}
 \end{figure}
 
-\hl{Talvez explicar um pouco sobre o diagrama?}
+
 
 \subsection{Ambiente de Desenvolvimento}
 
 A ferramenta de desenvolvimento escolhida para implementação
 das aplicações foi o \textit{Visual Studio Code} em conjunto com extensões disponíveis
 no seu repositório para facilitar seu uso com as tecnologias escolhidas para o projeto. Além
-da própria ferramenta de desenvolvimento, foi necessário a instalação dos kits de desenvolvimento
-(SDK) das tecnologias que foram utitlizadas. Foram eles o \textit{dotnet} para a implementação do Back-End,
-em conjunto com o \textit{Node.js} e \textit{Vue CLI} para implementação do Front-End.
+da própria ferramenta de desenvolvimento, foi necessário a instalação dos SDKs
+(Kit de Desenvolvimento) das tecnologias que foram utitlizadas. Foram eles o \textit{dotnet} para a implementação do \textit{WebService},
+em conjunto com o \textit{Node.js} e \textit{Vue CLI} para implementação do cliente \textit{web}.
 
-Foi utilizado, como auxílio para o desenvolvimento do Back-End que é uma API REST, o
+Foi utilizado, como auxílio para o desenvolvimento do \textit{WebService} que é uma API REST, o
 \textit{software} \textit{Insomnia REST Client} para realização de testes.
 
-Para a criação do banco de dados MySQL foi utilizado a ferramenta \textit{Docker} para
-seu gerenciamento via contâiner, e para acesso e manipulação desse MySQL foi utilizado o software \textit{Dbeaver}.
+Para a criação do banco de dados \textit{MySQL} foi utilizado a ferramenta \textit{Docker} para
+seu gerenciamento via contâiner, e para acesso e manipulação desse \textit{MySQL} foi utilizado o software \textit{Dbeaver}.
 Além dessas ferramentas, foi utlilizado o site \textit{mockaroo} que oferece scripts para preenchimento
 de banco de dados com informações de testes. Facilitando o processo de desenvolvimento.
 
 \subsection{Implementação}
 
-Como mencionado anteriormente, foi utilizado a metodologia Kanban para gerenciamento
-de tarefas, o desenvolvimento seguiu de maneira confortável tarefa por tarefa
-criada no quadro. Algumas mudanças foram realizadas no escopo conforme o necessário durante o desenvolvimento.
-
-\hl{Melhorar esse paragrafo}
+Como mencionado anteriormente, foi utilizado a metodologia \textit{Kanban} para gerenciamento
+de tarefas, a implementação dos sistemas foram realizadas baseados nessas tarefas.
+Para implementação de algumas dessas tarefas houveram atrasos devido a necessidade de aprendizagem
+para a resolução daquele problema técnico. Como por exemplo a implementação de sistema de segurança nas aplicações.
 
 \subsection{Documentação}
 
-Após a finalização da implementação dos sistemas, foi iniciado o processo de documentação
+Após a finalização da implementação das aplicações, foi construída uma documentação
 dos \textit{softwares}, essa documentação foi feita na plataforma \textit{GitHub} na funcionalidade
-de \textit{Wiki}. Foi criada uma Wiki em cada repositório da aplicação, uma para a aplicação em \textit{Vue,js}
+de \textit{Wiki}. Foi criada uma \textit{Wiki} em cada repositório da aplicação, uma para a aplicação em \textit{Vue,js}
 e outra para a API em \textit{.NET}
 
-\section{Resultados}
+\section{Resultados}\label{Resultados}
 
-% Mudar Status
-No o desenvolvimento foi finalizado com a maioria dos
-requisitos prospostos inicialmente implementados, dois \textit{prints} da aplicação
-Web são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
+As duas aplicações foram implementadas junto com todas as funcionalidades propostas.
+Dois \textit{prints} da aplicação \textit{web} são exibidos nas Figuras~\ref{fig:welcome} e~\ref{fig:home}.
 
 \begin{figure}[H]
     \centering
@@ -478,17 +475,21 @@ Web são exibidos nas figuras~\ref{fig:welcome} e~\ref{fig:home}
     \caption{Tela de bem-vindo}\label{fig:welcome}
 \end{figure}
 
+Essa é a primeira tela da aplicação, onde o usuário pode fazer seu \textit{Login} ou se cadastrar.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{prints/home.png}
     \caption{Tela \textit{home}}\label{fig:home}
 \end{figure}
 
-% Falar sobre a API, talvez colocar swagger aqui?
-O Desenvolvimento da API em .NET foi finalizadada e todas as funcionalidades
-usadas pela aplicação Web foram implementadas com restrições de acesso e esquemas de
-segurança, um \textit{print} dos endpoints disponíveis nessa API é exibido
-na figura~\ref{fig:swagger} através da biblioteca Swagger
+Essa tela é a \textit{Home}, é onde o usuário vê as postagens de outros usuários em comunidades.
+A partir dessa tela o usuário pode também entrar em comunidades, fazer postagens, ou realizar uma pesquisa.
+
+O Desenvolvimento da API em \textit{.NET} foi finalizadada e todas as funcionalidades
+usadas pela aplicação \textit{Web} foram implementadas com restrições de acesso e esquemas de
+segurança, um \textit{print} dos endpoints disponíveis nessa \textit{API} é exibido
+na Figura~\ref{fig:swagger} através da biblioteca \textit{Swagger}.
 
 \begin{figure}[H]
     \centering
@@ -496,18 +497,31 @@ na figura~\ref{fig:swagger} através da biblioteca Swagger
     \caption{Print da tela do Swagger}\label{fig:swagger}
 \end{figure}
 
-\hl{Escrever sobre a documentacao e melhorar texto sobre a implementacao}
+Além do desenvolvimento, foi criada a documentação técnica dessas aplicações, elas estão
+na \textit{Wiki} dos repositórios \textit{Git}. Além dos arquivos \textit{README} que mostram
+uma introdução das aplicações na tela do repositório.
 
-\section{Conclusão}
+Os repositórios estão localizados nos links especificados a seguir:
+\begin{itemize}
+	\item https://github.com/V11-0/ForyumServer (WebService)
+	\item https://github.com/V11-0/ForyumWeb (Aplicação Web)
+\end{itemize}
 
-O artigo mostrou problemas existentes no ensino de desenvolvimento de software e propôs
-a criação de um sistema com uma documentação abrangente para ajudar estudandes sobre alguns dos
-conceitos e tecnologias usadas no desenvolvimento de software, além de prover uma abordagem prática
-sobre o assunto. O Desenvolvimento e a criação da documentação do Software proposto está
-quase sendo finalizado e todo esse material está disponível na plataforma \textit{GitHub}
-para que estudantes do Curso do ADS e outros estudantes interessados possam usufruir e adiquirir
-conhecimentos através desse material.
+\section{Conclusão}\label{Conclusao}
 
+O artigo mostrou a dificuldade do ensino em relação as novas tecnologias no desenvolvimento de \textit{software}
+e propôs a criação de um sistema com uma documentação técnica para ajudar estudandes sobre alguns dos
+conceitos e tecnologias usadas no desenvolvimento de \textit{software}, além de prover uma abordagem prática
+sobre o assunto. Foram implementados duas aplicações sendo um \textit{WebService} com tecnologias \textit{.NET} e
+uma aplicação \textit{web} com o \textit{framework Vue}. O código fonte e a documentação técnica dessas duas aplicações
+estão disponíveis \textit{online} na plataforma \textit{GitHub}.
+
+Como trabalhos futuros, uma pesquisa de opinião poderia ser feita para estudantes de TI em relação ao material
+disponibilizado por este trabalho. Além da documentação, outros conceitos que não foram abrangidos nesse trabalho poderiam
+ser explorados como questão de \textit{Pipelines} para realização de entrega contínua (\textit{CI/CD}).
+Outra recomendação poderia ser o aprimoramento e criação de novos recursos para \textit{software} criado nesse trabalho.
+
+\bibliographystyle{sbc}
 \bibliography{bibliografia}
 
 \end{document}
