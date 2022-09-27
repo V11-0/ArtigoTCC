@@ -32,42 +32,50 @@
 \maketitle
 
 \begin{abstract}
-  Regarding difficulties in universities for adapting emerging technologies into curriculum, this paper
-  has the objective to create a technical software documentation based in a developed software that
-  uses consolidated market technologies. Containing simple and comprehensive language to contribute
-  with the formation of IT students.
+  Given the challenges for IT Universities to adapt their curriculum in regarding to new tecnologies
+  due to the fast-growing-market, this paper has a main objective to make avaliable a technical
+  documentation of a developed software with consolidated technologies in the market to collaborate with the
+  formation of IT Students.
 \end{abstract}
 
 \begin{resumo}
-  Com a dificuldade de adequação das instituições de ensino em relação a novas tecnologias, este trabalho possui como principal objetivo
-  disponibilizar uma documentação técnica de um \textit{software} desenvolvido com tecnologias
-  consolidadas no mercado. Com uma linguagem simples e compreensível para colaborar na formação
-  de alunos dos cursos de Análise e Desenvolvimento de Sistemas.
+    Dado o desafio das instituições de ensino da área de tecnologia em adequar os conteúdos abordados
+    às novas tecnologias devido a rápida evolução do mercado, este trabalho tem como principal objetivo
+    disponibilizar uma documentação técnica de um software desenvolvido com tecnologias consolidadas no mercado
+    afim de colaborar na formacão de alunos do curso de Análise e Desenvolvimento de Sistemas.
 \end{resumo}
 
 \section{Introdução}
 
-A área de TI (Tecnologia da Informação), é uma área que evoluiu muito nas ultimas
-décadas~\cite{Pacheco10} e continua evoluindo rapidamente. Novas Tecnologias e ferramentas
+A área de TI (Tecnologia da Informação), é uma área que evoluiu muito nas últimas
+décadas~\cite{Pacheco10} e continua evoluindo rapidamente. Novas tecnologias e ferramentas
 surgem em rítmo acelerado e muitas delas ganham popularidade, demandando assim, novas
-habilidades para os profissionais de TI\@. Com essa evolução, há uma dificuldade por parte das
-instituições de ensino para ofertar conteúdos sobre essas habilidades para estudantes, fazendo com que
-muitos desses busquem cursos ou certificações para aprimorar seus conhecimentos.~\cite{macedo09}.
+habilidades para os profissionais de TI\@. Com essa evolução, surge um desafio para as
+instituições de ensino atualizarem seus conteúdos, o principal fator para esse problema
+é a burocracia para a atualização das ementas de disciplinas. Isso faz com que
+muitos desses busquem cursos ou certificações para aprimorar seus conhecimentos~\cite{macedo09}.
 Além disso, de acordo com uma pesquisa realizada por~\cite{wei08} os alunos de cursos de como Engenharia de \textit{Software}
-se preocupam em possuir um aprendizado voltado para prática e sempre ter convivência com conceitos
+se preocupam em possuir um aprendizado voltado para prática e em ter convivência com conceitos
 e métodos importantes para o mercado de trabalho.
 
 Baseando-se nessas questões, a produção desse trabalho tem a proposta de desenvolver
 um sistema com tecnologias e ferramentas populares que possuem demanda por profissionais,
 com o objetivo principal de construir uma documentação
-que abrange todos os aspectos desse sistema e que explique com clareza como o software
+que abrange os aspectos desse sistema e que explique com clareza como o software
 funciona, quais tecnologias foram usadas e como se deu o seu desenvolvimento. Assim ajudando estudantes a
 entenderem alguns conceitos de desenvolvimento de software e como se dão suas aplicações na prática.
 
-% TODO: Falar do Desenvolvimento
+Neste trabalho, então, a solução desenvolvida possui o nome de `Foryum' e esse sistema foi desenvolvido
+com tecnologias escolhidas baseadas em pesquisas que são detalhadas na seção~\ref{Desenvolvimento},
+foram elas \textit{.NET} e \textit{Vue.js}. Além da solução técnica, foi criada a documentação dessa solução, que é
+importante para que quem ver o código possa entende-lo. Esses materiais estão disponíveis na plataforma \textit{GitHub} nos
+\textit{links} mostrados na seção~\ref{Resultados} de Resultados. Com o desenvolvimento de um software com essas tecnologias,
+e uma documentação do \textit{software} que utiliza essas tecnologias, espera-se que a disponibilização desses materiais
+possam colaborar com estudantes dos cursos de Análise e Desenvolvimento de Sistemas pois eles mostram como funciona um ambiente
+real de \textit{software}.
 
 Esse artigo possui a seguinte organização: A seção~\ref{FundamentacaoTeorica} nomeada Fundamentação Teórica,
-evidencia em subseções os conceitos empregados durante o desenvolvimento deste trabalho. Na sequencia,
+evidencia em subseções os conceitos empregados durante o desenvolvimento deste trabalho. Na sequência,
 a seção~\ref{Metodologia} nomeada Metodologia, descreve o processo realizado para esse desenvolvimento.
 A seção~\ref{Desenvolvimento}, Desenvolvimento do Trabalho, mostra as etapas de desenvolvimento para chegar ao objetivo do trabalho, divididos em subseções.
 A seção~\ref{Resultados} de Resultados, mostra o que foi implementado e documentado de acordo com o objetivo do trabalho.
@@ -85,7 +93,7 @@ Um conceito importante no desenvolvimento de sistemas é o \textit{framework}, d
 resolver problemas recorrentes no desenvolvimento e acelerar esse processo. O
 Projeto Pedagógico do Curso de Análise e Desenvolvimento de Sistemas do IFSP - Campus Hortolândia
 contém uma disciplina que ensina o uso de um framework para o desenvolvimento. No entanto, a bibliografia básica
-que aborda esse \textit{framework} é do ano de 2010 e faz uso da tecnologia JSF (\textit{Java Server Pages}), que hoje em dia é muito pouco usada.~\cite{webtechsurveyJSF}
+que aborda esse \textit{framework} é do ano de 2010 e faz uso da tecnologia JSF (\textit{Java Server Pages}), que hoje em dia é muito pouco usada~\cite{webtechsurveyJSF}.
 
 \subsection{WebService}\label{WebService}
 
@@ -95,7 +103,7 @@ WebServices fazem parte da arquitetura orientada a serviços (SOA).
 Um tipo de \textit{WebService} muito utilizado é o REST, que significa
 \emph{Representational State Transfer} ele funciona servindo requisições de clientes
 para certos serviços. Por exemplo, suponha que um \textit{WebService} REST tenha uma \textit{URL} que fornece
-informações de funcionários
+informações de funcionários:
 
 \begin{verbatim}
   GET http://meuwebservice/funcionarios
@@ -124,10 +132,10 @@ diferentes operações em diferentes \textit{endpoints}, como inserir um objeto 
 
 A definição de qualidade no contexto da computação nem sempre é um consenso,
 existem diferentes terminologias, as quais podem causar problemas para pessoas que não
-possuem conhecimento sobre.~\cite{Duarte03}
+possuem conhecimento sobre~\cite{Duarte03}.
 
 Um software pode ser considerado de qualidade quando ele atende a todas as necessidades, explicitas
-e implícitas para qual ele foi feito.~\cite{Duarte03}
+e implícitas para qual ele foi feito~\cite{Duarte03}.
 
 Enquanto ao código, que será o foco do artigo, existem padrões que devem ser seguidos para um código
 possuir qualidade. Para isso devemos pontuar que para um código ter qualidade ele deve funcionar, e principalmente,
@@ -135,7 +143,7 @@ ser légivel.
 
 \begin{quote}
   ``Muitos programadores iniciantes acham que um bom código é aquele que é correto, ou seja, faz o que tem
-  que fazer.''~\cite{Levy04}.
+  que fazer''~\cite{Levy04}.
 \end{quote}
 
 Um código, para funcionar deve possuir ao menos duas características, ele deve ser \textbf{Correto} e \textbf{Eficiente},
@@ -195,11 +203,11 @@ e esse \textit{commit} é enviado para um repositório remoto, onde outras pesso
 De acordo com~\cite{Forward02softwaredocumentation}, a documentação de um \textit{software} é qualquer
 artefato que possui como finalidade informar sobre ele, em qualquer um de seus aspectos.
 
-~\cite{Coelho_2009} nos mostra dois tipos de documentações, são esses tipos
+~\cite{Coelho_2009} nos mostra dois tipos de documentações, são esses tipos:
 
 \begin{itemize}
-	\item Documentação Técnica
-	\item Documentação de Uso
+	\item Documentação Técnica;
+	\item Documentação de Uso.
 \end{itemize}
 
 As documentações técnicas de um sistema é toda aquela documentação voltada ao desenvolvedor e é
@@ -216,7 +224,7 @@ riscos para sua manutenção~\cite{deinvestigaccao}.
 
 As metodologias ágeis surgiram na década de 80 para melhorar a área de desenvolvimento de software,
 que era algo muito rigoroso naquela época, muitos projetos possuiam problemas e as metodologias ágeis foram então
-criadas para tentar solucioná-los.~\cite{Santos05}
+criadas para tentar solucioná-los~\cite{Santos05}.
 
 \subsubsection{Kanban}
 
@@ -262,9 +270,9 @@ e com esses requisitos, foram criados diagramas de classes e casos de uso.
 Para o desenvolvimento, foram usados recursos oferecidos pela plataforma \textit{GitHub}, esses recursos são:
 
 \begin{itemize}
-  \item Repositório \textit{Git}
-  \item Quadro \textit{Kanban} para gerenciamento de projetos
-  \item \textit{Wiki} onde será criada a documentação técnica do sistema
+  \item Repositório \textit{Git};
+  \item Quadro \textit{Kanban} para gerenciamento de projetos;
+  \item \textit{Wiki} onde será criada a documentação técnica do sistema.
 \end{itemize}
 
 \section{Desenvolvimento do Trabalho}\label{Desenvolvimento}
@@ -275,10 +283,10 @@ informações importantes sobre o uso de tecnologias em geral. A pesquisa nos d�
 de informações relevantes para usarmos no trabalho
 
 \begin{itemize}
-  \item Frameworks para Web mais utilizados
-  \item Frameworks gerais mais utilizados
-  \item Ferramentas para deploy e gerenciamento mais usadas
-  \item Banco de Dados mais utilizados
+  \item Frameworks para Web mais utilizados;
+  \item Frameworks gerais mais utilizados;
+  \item Ferramentas para deploy e gerenciamento mais usadas;
+  \item Banco de Dados mais utilizados.
 \end{itemize}
 
 Os resultados dessas categorias, entre desenvolvedores profissionais, são exibidos nas
@@ -391,7 +399,7 @@ Com o processo e as tecnologias definidas. Agora será decidido o domínio do si
 e seus requisitos.
 
 Como o foco do trabalho não é o domínio da aplicação, foi optado por copiar o funcionamento de uma aplicação
-existente, a aplicação escolhida é o \textit{Reddit}.
+existente, a aplicação escolhida é o \textit{Reddit}, o nome dessa aplicação será `Foryum'.
 
 O \textit{Reddit}, de acordo com seu website é:
 
@@ -407,6 +415,10 @@ dar um voto positivo ou negativo para essa postagem.
 Foram criados dois diagramas de casos de uso que representam as funcionalidades esperadas no sistema,
 eles são apresentados nas Figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_diagram}.
 
+Junto com os casos de uso, foram definidos as propiedades das entidades do sistema
+a partir da criação de um diagrama de classe, o diagrama resultante é exibido
+na Figura~\ref{fig:classes_diagram}.
+
 %TODO Diagrama está com nome antigo [Simple Forum]
 
 \begin{figure}[H]
@@ -417,17 +429,14 @@ eles são apresentados nas Figuras~\ref{fig:welcome_diagram} e~\ref{fig:home_dia
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{diagrams/home_diagram.png}
+    \includegraphics[width=0.5\textwidth]{diagrams/home_diagram.png}
     \caption{Diagrama de caso de uso da tela \textit{home}}\label{fig:home_diagram}
 \end{figure}
 
-Junto com os casos de uso foram definidos as propiedades das entidades do sistema
-a partir da criação de um diagrama de classe, o diagrama resultante é exibido
-na Figura~\ref{fig:classes_diagram}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{diagrams/classes_diagram.png}
+    \includegraphics[width=0.7\textwidth]{diagrams/classes_diagram.png}
     \caption{Diagrama de classes do sistema}\label{fig:classes_diagram}
 \end{figure}
 
@@ -469,22 +478,23 @@ e outra para a API em \textit{.NET}
 As duas aplicações foram implementadas junto com todas as funcionalidades propostas.
 Dois \textit{prints} da aplicação \textit{web} são exibidos nas Figuras~\ref{fig:welcome} e~\ref{fig:home}.
 
+A Figura~\ref{fig:welcome} mostra a primeira tela da aplicação, onde o usuário pode fazer seu \textit{Login} ou se cadastrar.
+
+A Figura~\ref{fig:home} mostra a tela \textit{Home}, é onde o usuário vê as postagens de outros usuários em comunidades.
+A partir dessa tela o usuário pode também entrar em comunidades, fazer postagens, ou realizar uma pesquisa.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{prints/welcome.png}
     \caption{Tela de bem-vindo}\label{fig:welcome}
 \end{figure}
 
-Essa é a primeira tela da aplicação, onde o usuário pode fazer seu \textit{Login} ou se cadastrar.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{prints/home.png}
     \caption{Tela \textit{home}}\label{fig:home}
 \end{figure}
-
-Essa tela é a \textit{Home}, é onde o usuário vê as postagens de outros usuários em comunidades.
-A partir dessa tela o usuário pode também entrar em comunidades, fazer postagens, ou realizar uma pesquisa.
 
 O Desenvolvimento da API em \textit{.NET} foi finalizadada e todas as funcionalidades
 usadas pela aplicação \textit{Web} foram implementadas com restrições de acesso e esquemas de
@@ -503,8 +513,8 @@ uma introdução das aplicações na tela do repositório.
 
 Os repositórios estão localizados nos links especificados a seguir:
 \begin{itemize}
-	\item https://github.com/V11-0/ForyumServer (WebService)
-	\item https://github.com/V11-0/ForyumWeb (Aplicação Web)
+	\item https://github.com/V11-0/ForyumServer (WebService);
+	\item https://github.com/V11-0/ForyumWeb (Aplicação Web).
 \end{itemize}
 
 \section{Conclusão}\label{Conclusao}
@@ -519,7 +529,8 @@ estão disponíveis \textit{online} na plataforma \textit{GitHub}.
 Como trabalhos futuros, uma pesquisa de opinião poderia ser feita para estudantes de TI em relação ao material
 disponibilizado por este trabalho. Além da documentação, outros conceitos que não foram abrangidos nesse trabalho poderiam
 ser explorados como questão de \textit{Pipelines} para realização de entrega contínua (\textit{CI/CD}).
-Outra recomendação poderia ser o aprimoramento e criação de novos recursos para \textit{software} criado nesse trabalho.
+Outra recomendação poderia ser o aprimoramento e criação de novos recursos para o \textit{software} criado nesse trabalho, tais recursos
+poderiam ser o \textit{upload} de mídias e gerenciamento de sessões, por exemplo.
 
 \bibliographystyle{sbc}
 \bibliography{bibliografia}
